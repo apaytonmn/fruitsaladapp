@@ -1,0 +1,29 @@
+<div class="flex-container">
+  <div style="width:500px">
+  </div>
+  <div style="text-align:center; font-family: Arial">
+    <h1>
+      {{ title }}!
+    </h1>
+    <!-- Use async pipe to bind to the apple$ observable in the apple component
+         This creates a subscription so our page will immediately reflect any 
+         changes to the state of our apple. Using with ngIf prevents the elements
+         within from rendering until we have a apple. -->
+    <div *ngIf = "apple$ | async as apple">
+      <!-- Set up buttons. Click will call functions that dispatch our actions. -->
+      <form>
+        <button class="local-button-border" type="submit" (click)="newApple()">New Apple</button>
+      </form>
+      <!-- Text display of what our state looks like -->
+      <mat-card style="margin-top: 50px">
+        <mat-card-content>
+          <div style="text-align:left; font-family: Arial">
+              <h3>isWashed = {{apple.isWashed}}</h3>
+              <h3>bitesRemaining = {{apple.bitesRemaining}}</h3>
+              <h3>variety = {{apple.variety}}</h3>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
