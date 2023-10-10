@@ -11,7 +11,7 @@
     "rxjs-compat": "6.5.1",
     "@angular/cdk": "7.3.7",
     "@ngrx/entity": "7.4.0",
-    "@angular/core": "7.2.14",
+    "@angular/core": "10.2.5",
     "@ngrx/effects": "7.4.0",
     "@angular/forms": "7.2.14",
     "@types/jasmine": "2.8.16",
